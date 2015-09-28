@@ -8,3 +8,4 @@ CMakeFiles/
 lib*.so.*
 Makefile
 src/stable/interfaces/python/
+src/stable/components/rtabmap/bin/
