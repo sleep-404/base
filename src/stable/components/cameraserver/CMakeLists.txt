@@ -23,3 +23,5 @@ TARGET_LINK_LIBRARIES(cameraserver
 	logger
     crypto
 	)
+
+enablec11(cameraserver)

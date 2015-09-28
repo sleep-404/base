@@ -34,7 +34,7 @@ class CameraTask: public IceUtil::Thread {
   jderobot::CameraDescriptionPtr cameraDescription;
   const jderobot::Camera* mycamera;
   IceUtil::Mutex requestsMutex;
-  std::list<std::pair<jderobot::AMD_ImageProvider_getImageDataPtr, std::string>> requests;
+  std::list<std::pair<jderobot::AMD_ImageProvider_getImageDataPtr, std::string> > requests;
   int fps;
   bool _done;
   jderobot::ImageDataPtr reply;

@@ -67,7 +67,6 @@ IF (NOT DEFINED OpenCV_VERSION)
 		MESSAGE("inc dir: ${OpenCV_INCLUDE_DIR}")
 		IF( OpenCV_INCLUDE_DIR )
 	    	MESSAGE("OpenCV was found in: ${OpenCV_INCLUDE_DIR}")
-	
 		    FIND_LIBRARY( OpenCV_LIBRARY1 NAMES opencv_core PATHS ${OpenCV_DIR} ENV C++LIB ENV PATH PATH_SUFFIXES lib lib64)
 		    FIND_LIBRARY( OpenCV_LIBRARY2 NAMES opencv_highgui PATHS ${OpenCV_DIR} ENV C++LIB ENV PATH PATH_SUFFIXES lib lib64)
 		    FIND_LIBRARY( OpenCV_LIBRARY3 NAMES opencv_contrib PATHS ${OpenCV_DIR} ENV C++LIB ENV PATH PATH_SUFFIXES lib lib64)
@@ -92,16 +91,9 @@ IF (NOT DEFINED OpenCV_VERSION)
 				SET(DEPS "${DEPS}libopencv-calib3d2.4, libopencv-contrib2.4, libopencv-core2.4, libopencv-features2d2.4, libopencv-flann2.4, libopencv-gpu2.4, libopencv-highgui2.4, libopencv-imgproc2.4, libopencv-legacy2.4, libopencv-ml2.4, libopencv-objdetect2.4, libopencv-video2.4, libcv2.4, libcvaux2.4, libhighgui2.4,")
 
 		    ENDIF( OpenCV_LIBRARIES )
-
-
 		ELSE(OpenCV_INCLUDE_DIR)
 			MESSAGE( FATAL_ERROR "*** OpenCV not found")
 		ENDIF(OpenCV_INCLUDE_DIR)
-
-	ELSE(OpenCVHG_INCLUDE_DIR)
-
-		MESSAGE(FATAL_ERROR "*** OpenCV: libhighgui-dev not found!")
-
 	ENDIF(OpenCVHG_INCLUDE_DIR)
 
 ENDIF()
